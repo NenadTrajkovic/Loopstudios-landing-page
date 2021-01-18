@@ -7,6 +7,12 @@
   box-sizing: border-box;
 }
 
+body {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
@@ -20,18 +26,59 @@ img {
   max-width: 100%;
 }
 
-/* Variables */
+/* Fonts and Variables */
+
+@font-face {
+  font-family: "Alata";
+  src: url("./fonts/Alata/Alata-Regular.ttf") format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "JosefinSans";
+  src: url("./fonts/Josefine/JosefinSans-VariableFont_wght.ttf") format('truetype');
+  font-weight: 300;
+}
 
 :root {
+  --MainFont: 1.5rem;
   --White: hsl(0, 0%, 100%);
   --Black: hsl(0, 0%, 0%);
   --Dark_Gray: hsl(0, 0%, 55%);
   --Very_Dark_Gray: hsl(0, 0%, 41%);
+}
 
-  --Alata: url("https://fonts.google.com/specimen/Alata");
---Weight: 400;
+/* Styles */
 
-  --JosefinSans: url("https://fonts.google.com/specimen/Josefin+Sans");
---Weight: 300;
+.container {
+  max-width: 100%;
+  height: auto;
+}
 
+.landing {
+  width: 100%;
+  position: relative;
+}
+
+.header__nav {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 375px) {
+  .hero {
+    width: 100%;
+    height: auto;
+  }
+  .header__title {
+    position: absolute;
+    top: 2.5rem;
+    left: 1.5rem;
+    font-size: 2rem;
+    font-family: Alata;
+  }
+  .fa.fa-bars {
+    position: absolute;
+    top: .8rem;
+    right: .5rem;
+  }
 }
